@@ -1,0 +1,47 @@
+{
+  "id": "fuel-octane-estimator",
+  "title": "Octane Estimator",
+  "name": "Octane Estimator",
+  "version": "1.0.0",
+  "icon": "fuel-octane-estimator_icon.png",
+  "vendor": "custom",
+  "loggingId": "OAA1",
+  "settings": [],
+  "screens": [
+    {
+      "name": "main",
+      "layout": "full",
+      "buttons": [
+        ["resetButton", "Reset"]
+      ],
+      "widgets": [
+        { "id": "octaneValue", "type": "text", "x": 50, "y": 20, "w": 50, "h": 20, "fontSize": 48 },
+        { "id": "statusLabel", "type": "text", "x": 50, "y": 45, "w": 50, "h": 10 },
+        { "id": "avgCorrection", "type": "text", "x": 10, "y": 60, "w": 80, "h": 10 },
+        { "id": "sampleCount", "type": "text", "x": 10, "y": 70, "w": 80, "h": 10 },
+        { "id": "sparkline", "type": "canvas", "x": 10, "y": 80, "w": 50, "h": 15 }
+      ]
+    }
+  ],
+  "config": {
+    "signals": {
+      "ignitionTiming": "DME.IgnitionTiming",
+      "timingCorrectionLong": "DME.IgnitionTimingCorrectionLong",
+      "timingCorrectionShort": "DME.IgnitionTimingCorrectionShort",
+      "knockRetard": "DME.KnockRetard",
+      "coolantTemp": "DME.CoolantTemp",
+      "engineSpeed": "DME.EngineSpeed",
+      "massAirFlow": "DME.MassAirFlow"
+    },
+    "algorithm": {
+      "minWarmTempC": 70,
+      "rpmMin": 1200,
+      "rpmMax": 6500,
+      "loadChangeThreshold": 0.15,
+      "minSamples": 30,
+      "octaneMin": 80,
+      "octaneMax": 100,
+      "correctionScale": 2.5
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "fuel-octane-estimator",
+  "version": "1.0.0",
+  "description": "Heuristic fuel octane estimator for BMW MGU (iDrive 7)",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js"
+  },
+  "keywords": ["bmw", "mgu", "idrive7", "can", "octane", "ignition"],
+  "license": "MIT"
+}
