@@ -1,0 +1,10 @@
+{
+  "apps": {
+    "fuel-octane-estimator": {
+      "title": "Octane Kolesnikov",
+      "description": "Оценка октанового числа топлива",
+      "author": "kva077",
+      "icon": "icon.png"
+    }
+  }
+}
